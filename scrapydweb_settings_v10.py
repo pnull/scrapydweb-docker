@@ -106,7 +106,7 @@ SCRAPYD_LOG_EXTENSIONS = ['.log', '.log.gz', '.txt']
     # '',  # visit the second Scrapyd server without reverse proxy.
 # ]
 # See https://github.com/my8100/scrapydweb/issues/94 for more info.
-SCRAPYD_SERVERS_PUBLIC_URLS = None
+SCRAPYD_SERVERS_PUBLIC_URLS = os.getenv("SCRAPYD_SERVERS_PUBLIC_URLS").split(',')
 
 
 ############################## LogParser ######################################
